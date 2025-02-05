@@ -1,0 +1,37 @@
+CREATE TABLE IF NOT EXISTS worker (
+  id INTEGER PRIMARY KEY,
+  name TEXT
+);
+
+CREATE TABLE IF NOT EXISTS client (
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  phone INT,
+  address TEXT
+);
+
+CREATE TABLE IF NOT EXISTS top (
+  id INTEGER PRIMARY KEY,
+  name TEXT UNIQUE,
+  factor REAL
+);
+
+CREATE TABLE IF NOT EXISTS sizes (
+  id INTEGER PRIMARY KEY,
+  name TEXT UNIQUE,
+  price REAL
+);
+
+CREATE TABLE IF NOT EXISTS pizza (
+  id INTEGER PRIMARY KEY,
+  n INT,
+  top INT REFERENCES top(id),
+  sizes INT REFERENCES sizes(id)
+);
+
+CREATE TABLE IF NOT EXISTS orders (
+  id INTEGER PRIMARY KEY,
+  worker INT REFERENCES worker(id),
+  client INT REFERENCES client(id),
+  pizza INT REFERENCES pizza(id)
+);
