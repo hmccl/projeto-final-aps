@@ -273,6 +273,7 @@ class MainWidget(QWidget):
             self.newClientName.clear()
             self.newClientPhone.clear()
             self.newClientAddress.clear()
+            print("Novo cliente cadastrado!")
         else:
             print("Preencha todos os campos do cliente!")
 
