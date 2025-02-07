@@ -15,3 +15,23 @@
 ### Diagrama de classe
 
 ![Diagrama de classe](./docs/diagrama-de-classe.png)
+
+## Instruções
+
+Crie um *virtual environment*.
+
+```
+python3 -m venv env
+```
+
+Instale as bibliotecas.
+
+```
+env/bin/pip install -r requirements.txt
+```
+
+Execute o programa.
+
+```
+env/bin/python3 main.py
+```
