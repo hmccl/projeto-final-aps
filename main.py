@@ -213,7 +213,7 @@ class MainWidget(QWidget):
         layout.addRow(saveClientButton)
 
         groupBox.setLayout(layout)
-        groupBox.setMinimumSize(400, 400)
+        groupBox.setMinimumSize(300, 500)
         return groupBox
 
     def newOrder(self):
@@ -244,7 +244,7 @@ class MainWidget(QWidget):
         layout.addRow(saveOrderButton)
 
         groupBox.setLayout(layout)
-        groupBox.setMinimumSize(500, 500)
+        groupBox.setMinimumSize(300, 500)
         return groupBox
 
     def orderFinish(self):
