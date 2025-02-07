@@ -30,7 +30,7 @@
 
 #### Cadastrar dados
 
-**Descrição:** Atendente anota pedido do cliente.
+**Descrição:** Atendente cadastra os dados do cliente.
 
 **Atores:** Atendente.
 
@@ -38,17 +38,15 @@
 
 **Fluxo básico:**
 
-1. Inicia o cadastro do cliente, pedindo.
+1. Inicia o cadastro do cliente, pedindo nome, número de telefone e endereço.
 
-1. Adiciona as pizzas desejadas pelo cliente.
-
-1. Finaliza o pedido do cliente.
+1. Finaliza o cadastro do cliente.
 
 **Fluxo alternativo:**
 
-1. Cliente não é cadastrado.
+1. Cliente é cadastrado.
 
-1. Cadastrar cliente.
+1. Não cadastrar cliente novamente.
 
 ### Diagrama de sequência
 
