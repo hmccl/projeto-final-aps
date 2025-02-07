@@ -1,0 +1,7 @@
+@startuml
+
+Atendente -> Sistema: saveClient()
+Sistema --> Atendente: OK
+Sistema --> Atendente: erro
+
+@enduml

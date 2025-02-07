@@ -1,0 +1,15 @@
+@startuml
+
+left to right direction
+
+actor "Atendente" as atendente
+
+rectangle Pizzaria {
+  usecase "Anotar Pedido" as anotar
+  usecase "Cadastrar Dados" as cadastrar
+}
+
+atendente --> anotar
+anotar .> cadastrar : <<include>>
+
+@enduml

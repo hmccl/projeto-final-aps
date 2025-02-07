@@ -1,0 +1,40 @@
+@startuml
+
+class Cliente{
+  -nome: string
+  -telefone: string
+  -endereço: string
+  +listaClientes(): string[]
+  +adicionaClientes(): void
+}
+
+class Atendente{
+  +listaAtendentes(): string[]
+}
+
+class Pedido{
+  -atendenteID: string
+  -clienteID: string
+  +adicionarPedido(): void
+}
+
+class ItemPedido{
+  +adicionarItem(): void
+}
+
+class Pizza{
+  -sabor: string
+  -tamanho: string
+  -quantidade: string
+  +adicionarPizza(): void
+  +getValorPizza(): string
+  +listaSabores(): string[]
+  +listaTamanhos(): string[]
+}
+
+Cliente "1..*" -right- "1..1" Atendente: Fala
+Atendente "1..1" -right- "1..*" Pedido: Faz
+Pedido "1..1" -down- "1..*" ItemPedido: Tem
+ItemPedido "1..*" -- "1..1" Pizza: É
+
+@enduml

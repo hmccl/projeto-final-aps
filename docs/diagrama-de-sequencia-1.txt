@@ -1,0 +1,15 @@
+@startuml
+
+Atendente -> Sistema: activeOrder()
+Sistema --> Atendente: orderText(cliente, atendente)
+Sistema --> Atendente: erro
+
+Atendente -> Sistema: savePizza()
+Sistema --> Atendente: orderText(sabor, tamanho, quantidate, valor)
+Sistema --> Atendente: erro
+
+Atendente -> Sistema: saveOrder()
+Sistema --> Atendente: orderText(total)
+Sistema --> Atendente: erro
+
+@enduml
